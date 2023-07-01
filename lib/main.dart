@@ -4,8 +4,8 @@ import 'package:portfolio/navigation/main_layout.dart';
 import 'package:portfolio/pages/contact_page.dart';
 import 'package:portfolio/pages/home_page.dart';
 import 'package:portfolio/pages/resume.dart';
+import 'package:portfolio/theme/my_theme.dart';
 import 'firebase_options.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,6 +16,11 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
+  static final _defaultLightColorScheme =
+      ColorScheme.fromSwatch(primarySwatch: Colors.green);
+
+  static final _defaultDarkColorScheme = ColorScheme.fromSwatch(
+      primarySwatch: Colors.green, brightness: Brightness.dark);
   const MyApp({super.key});
 
   // This widget is the root of your application.
@@ -24,26 +29,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Johnny's Portfolio",
       theme: ThemeData(
-        brightness: Brightness.light,
-        primarySwatch: Colors.green,
-        // accentColor: Colors.green,
-        textTheme: TextTheme(
-          displayLarge: GoogleFonts.ubuntu(fontSize: 57, letterSpacing: 0),
-          displayMedium: GoogleFonts.ubuntu(fontSize: 45, letterSpacing: 0),
-          displaySmall: GoogleFonts.ubuntu(fontSize: 36, letterSpacing: 0),
-          headlineLarge: GoogleFonts.ubuntu(fontSize: 32, letterSpacing: 0),
-          headlineMedium: GoogleFonts.ubuntu(fontSize: 28, letterSpacing: 0),
-          headlineSmall: GoogleFonts.ubuntu(fontSize: 24, letterSpacing: 0),
-          titleLarge: GoogleFonts.ubuntu(fontSize: 22, letterSpacing: 0),
-          titleMedium: GoogleFonts.ubuntu(fontSize: 16, letterSpacing: 0.15),
-          titleSmall:
-              GoogleFonts.sourceCodePro(fontSize: 14, letterSpacing: 0.1),
-          bodyLarge:
-              GoogleFonts.sourceCodePro(fontSize: 16, letterSpacing: 0.15),
-          bodySmall:
-              GoogleFonts.sourceCodePro(fontSize: 12, letterSpacing: 0.4),
-        ),
-      ),
+          useMaterial3: true,
+          colorScheme: MyTheme.lightColorScheme,
+          textTheme: MyTheme.textTheme),
+      darkTheme: ThemeData(
+          useMaterial3: true,
+          colorScheme: MyTheme.darkColorScheme,
+          textTheme: MyTheme.textTheme),
       home: const MyHomePage(title: "Johnny Casares"),
     );
   }
