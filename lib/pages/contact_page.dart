@@ -9,7 +9,7 @@ import 'package:portfolio/services/firebase.dart';
 import 'package:email_validator/email_validator.dart';
 
 class ContactPage extends StatefulWidget {
-  ContactPage({super.key});
+  const ContactPage({super.key});
 
   @override
   State<ContactPage> createState() => _ContactPageState();

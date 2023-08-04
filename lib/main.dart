@@ -16,11 +16,6 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  static final _defaultLightColorScheme =
-      ColorScheme.fromSwatch(primarySwatch: Colors.green);
-
-  static final _defaultDarkColorScheme = ColorScheme.fromSwatch(
-      primarySwatch: Colors.green, brightness: Brightness.dark);
   const MyApp({super.key});
 
   // This widget is the root of your application.
@@ -53,7 +48,11 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   NavigationRailLabelType labelType = NavigationRailLabelType.all;
   int _selectedIndex = 0;
-  List<Widget> pages = [HomePage(), ResumePage(), ContactPage()];
+  List<Widget> pages = [
+    const HomePage(),
+    const ResumePage(),
+    const ContactPage()
+  ];
 
   @override
   Widget build(BuildContext context) {

@@ -16,8 +16,13 @@ class ResumePage extends StatelessWidget {
                 "assets/lib/assets/documents/JohnnyACasaresResumeWebApp.pdf");
           },
           child: const Icon(Icons.download)),
-      body: SfPdfViewer.asset(
-        pdfPath,
+      body: Center(
+        child: SizedBox(
+          width: 900,
+          child: SfPdfViewer.asset(
+            pdfPath,
+          ),
+        ),
       ),
     );
   }
