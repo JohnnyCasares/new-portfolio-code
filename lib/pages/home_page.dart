@@ -47,7 +47,10 @@ class HomePage extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.all(8),
                     child: Text(
-                      "Highest proficiency in Flutter, Python, Dart, Java, and C\n\nFluent in Spanish and English\n\nMy interest are cross-platform development and IoT\n\nCurrently experimenting with arduino and low level programming\n\nIn my free time I like to have fun playing soccer and video games",
+                      "Highest proficiency using Flutter, Dart, Python, Java, and C\n\n"
+                      "Fluent in Spanish and English\n\n"
+                      "Full stack developer with experience in Object Oriented Programming, NOSQL, and API integration\n\n"
+                      "In my free time I enjoy playing soccer, video games, and learning new languages",
                       style: Theme.of(context).textTheme.bodyMedium,
                       textAlign: TextAlign.justify,
                     ),
