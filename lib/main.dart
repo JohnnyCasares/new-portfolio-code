@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
           colorScheme: MyTheme.darkColorScheme,
           textTheme: MyTheme.textTheme),
-      home: const MyHomePage(title: "Johnny Casares"),
+      home: const MyHomePage(title: 'Johnny Casares'),
     );
   }
 }
